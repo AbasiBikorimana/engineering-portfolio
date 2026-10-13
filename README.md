@@ -1,6 +1,6 @@
 # Abasi Bikorimana — Engineering Portfolio
 
-A complete responsive portfolio built with Next.js App Router, TypeScript, Tailwind CSS, Motion, and typed project content. Dark theme by default, with a persistent light-theme option. No backend, account, form service, or API key required.
+A complete responsive portfolio built with Next.js App Router, TypeScript, Tailwind CSS and typed project content. Oat Milk light and Charcoal Slate dark themes follow the system preference until a persistent choice is saved. No backend, account, form service, or API key required.
 
 ## Run locally
 
@@ -25,9 +25,9 @@ The production build exports the site to `out/`. A prebuilt `out/` is included i
 
 ## Deploy to Vercel
 
-No deployment or remote repository has been created for this delivery. To deploy after reviewing the content:
+The existing repository is maintained at https://github.com/AbasiBikorimana/engineering-portfolio. Hosting state is not tracked in this checkout. To deploy after reviewing the content:
 
-1. Create a Git repository from this folder and push it to a repository you own. Do not commit `node_modules`, `.next`, or `.env.local`.
+1. Continue using the existing Git repository and review changes on a feature branch before merging. Do not commit `node_modules`, `.next`, or `.env.local`.
 2. In Vercel, choose **Add New → Project**, import the repository, and select the Next.js preset.
 3. Use the included build command `npm run build`. The project uses `output: 'export'`; the generated static output is `out/`. No server functions or runtime environment variables are required.
 4. Set `NEXT_PUBLIC_SITE_URL` to the exact HTTPS production origin (without a trailing slash). For an initial deployment where the domain is not known yet, deploy once, add the resulting origin, and redeploy. This generates a correct sitemap and absolute social metadata. No production domain is invented in this source.
@@ -59,18 +59,18 @@ VALIDATION.md               Checks run and remaining browser QA
 ## Edit content
 
 - **Identity, profiles, resume:** `content/profile.ts`. Replace `public/Abasi-Bikorimana-Resume.pdf` when the resume changes.
-- **New projects:** add a typed record to `content/projects.ts`. The project index, filters, route generation, sitemap, and next-project navigation update automatically. Add a new discipline to the filter list if needed. The homepage intentionally features the first two records and lists the rest.
+- **New projects:** add a typed record to `content/projects.ts`. The project index, filters, route generation, sitemap, and next-project navigation update automatically. Add a new discipline to the filter list if needed. The homepage displays all projects in a consistent responsive grid. Cards use the first supplied project image, with a labeled concept illustration as the fallback.
 - **Status:** keep the status honest. Use “Program completed” for completed educational programs, “In development,” “Learning / experiments,” or “Prototyping” as appropriate.
 - **Screenshots:** put optimized WebP/AVIF/JPEG/PNG images in `public/projects/<slug>/` and add `images` entries with `src`, descriptive `alt`, `caption`, `width`, and `height`. Gallery thumbnails are lazy-loaded; clicking opens a native modal dialog. Escape closes the modal and native dialog behavior manages focus. Next/Image preserves dimensions; static exports use pre-optimized source assets rather than a runtime optimizer.
 - **Video:** add `video: { embedUrl, title, transcript }` with a trusted HTTPS embed endpoint such as YouTube’s privacy-enhanced `youtube-nocookie.com/embed/...`. Supply accurate captions in the video platform and a plain-text transcript. Embeds are lazy-loaded and sandboxed. There are no invented demo videos in this delivery.
 - **Repository links:** add the actual repository URL to a project’s optional `repository` field. The general GitHub profile is present, but no individual repository URL has been guessed.
 - **Code:** the Unity page includes a clearly labeled standalone HLSL teaching example rendered by Shiki on the server at build time. It is not represented as Abasi’s project source. Replace it with reviewed real source and attribution when available.
 - **Illustrations:** lightweight SVG technical illustrations are code-native and labeled as concepts. They are not screenshots, build drawings, or evidence of project outcomes.
-- **Theme:** edit semantic CSS variables at the top of `app/globals.css`. Responsive rules cover mobile, tablet, and desktop. Motion is intentionally limited to a small hover lift on featured cards, with reduced-motion support.
+- **Theme:** edit semantic CSS variables at the top of `app/globals.css`. Responsive rules cover mobile, tablet, and desktop. Hover interactions change borders or backgrounds without transforms. Theme transitions respect reduced-motion preferences. Geist is served locally from `public/fonts/`, alongside its SIL Open Font License.
 
 ## Source and content policy
 
-The identity was confirmed as Abasi Bikorimana. Experience, dates, education, contact links, and the resume PDF come from `Abasi_Bikorimana_Resume_LSPACE.pdf` supplied in September 2026. The five requested project briefs provide project scope. There are no fabricated benchmark results, placement accuracy claims, employment claims, or skill ratings. NASA L’SPACE is described as an educational program, not NASA employment. The automated-placement page leaves individual task ownership pending.
+The identity was confirmed as Abasi Bikorimana. Experience, dates, education, contact links, and the resume PDF come from `Abasi_Bikorimana_Resume_LSPACE.pdf` supplied in September 2026. The supplied project briefs provide project scope. There are no fabricated benchmark results, placement accuracy claims, employment claims, or skill ratings. NASA L’SPACE is described as an educational program, not NASA employment.
 
 External profile destinations were taken from the confirmed resume. Repository contents and external profile availability were not independently verified in this environment. Review `CONTENT-REVIEW.md` before recruiter-facing publication.
 

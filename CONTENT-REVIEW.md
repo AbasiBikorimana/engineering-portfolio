@@ -17,7 +17,6 @@
 | Catholic Charities | Aug 2023–Aug 2024 administrative records work via Corporate Work Study |
 | Roblox commissions | June 2018–present in resume; 20+ commissioned projects, asset/environment work and client revisions |
 | BloxShade / Unity / Unreal | Topics and technologies in the supplied project brief; ongoing/learning status used conservatively |
-| Placement system | Modified Ender-3, coordinate placement, vacuum pickup, breadboard-first scope, possible PCB expansion; prototype performance not established |
 
 No Mimic Technologies employment is included. Resume project claims are self-reported source material, not independent verification. Dates marked “present” reflect the supplied resume and should be refreshed when circumstances change.
 
@@ -27,9 +26,8 @@ No Mimic Technologies employment is included. Resume project claims are self-rep
 2. BloxShade: exact repository, install requirements, matching screenshots and short clip. If reporting performance, include hardware, resolution, settings, test scene, and measurement method.
 3. Unity: repository, learning-source attribution, kernel / buffer diagrams, profiler captures, and actual output images.
 4. Unreal: one specific experiment, engine version, source link, result video, and explanation of the C++ implementation.
-5. Placement system: individual responsibility, current controller/hardware, pickup photos/video, coordinate calibration, repeatability measurements, and failure cases.
 
-The resume also supports an OpenGL Rendering Sandbox; it was not added as a sixth case study because the request specified five initial projects. It would be a strong later addition once source and screenshots are available.
+The resume also supports an OpenGL Rendering Sandbox; it is not currently included as a case study. It would be a strong later addition once source and screenshots are available.
 
 ## Editorial choices
 

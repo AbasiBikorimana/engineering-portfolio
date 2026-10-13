@@ -54,17 +54,5 @@ export const projects: Project[] = [
  outcome:'The project is presented as ongoing exploration. A completed simulation, shipped game, or custom engine is not claimed.',
  next:['Add the repository and Unreal Engine version.', 'Document one experiment with its objective, implementation, and observations.', 'Add a short demonstration video and personal lessons learned.'],
  source:'Project brief supplied by Abasi; implementation evidence pending.',images:[]
- },
- {
- slug:'component-placement',number:'05',title:'Automated Electronic Component Placement System',shortTitle:'Automated component placement',category:'Robotics',status:'Prototyping',
- summary:'Repurposing an Ender-3 motion platform for coordinate-based placement with a vacuum pickup.',
- tags:['Ender-3','Motion control','Vacuum pickup','Embedded hardware'],
- overview:'A robotics project based on a modified Ender-3, intended to place electronic components using a coordinate-based workflow and a vacuum pickup mechanism. Initial work targets breadboard prototyping, with PCB expansion as a possible later phase.',
- contributions:['Project focus: coordinate-based component placement using an existing motion platform.', 'Vacuum pickup mechanism and embedded hardware / motion control exploration.', 'Individual ownership of mechanical, electrical, and software tasks is still to be documented.'],
- challenges:['Relate placement coordinates to physical breadboard positions.', 'Develop a reliable pickup and release process for the intended components.', 'Integrate the pickup mechanism with the motion platform.'],
- architecture:['The modified Ender-3 supplies the coordinate-controlled motion platform.', 'A vacuum pickup is the selected handling approach.', 'The initial target is breadboard assembly; PCB placement remains potential future scope.'],
- outcome:'The system is in prototyping. Placement accuracy, repeatability, supported components, and successful automated assembly have not yet been documented.',
- next:['Confirm my specific responsibilities and the current hardware configuration.', 'Add photos, wiring diagrams, and a pickup / placement video.', 'Measure repeatability and document failure cases before making accuracy claims.'],
- source:'Project brief supplied by Abasi; prototype documentation pending.',images:[]
  }
 ];
