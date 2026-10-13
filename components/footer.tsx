@@ -1,0 +1,3 @@
+import Link from 'next/link';
+import { profile } from '@/content/profile';
+export function Footer(){return <footer className="site-footer"><div><Link href="/" className="footer-name">Abasi Bikorimana<span>.</span></Link><p>Computer science. Engineering curiosity.</p></div><div className="footer-links"><a href={profile.github} target="_blank" rel="noreferrer">GitHub ↗</a><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a><a href={`mailto:${profile.email}`}>Email ↗</a><a href={profile.resume} download>Resume ↓</a></div><div className="footer-bottom"><span>© 2026 Abasi Bikorimana</span><span>Lubbock, Texas <span className="tiny-dot"/> Texas Tech University</span><a href="#top">Back to top ↑</a></div></footer>}

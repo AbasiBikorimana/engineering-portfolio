@@ -1,0 +1,7 @@
+import type { Metadata } from 'next';
+import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/footer';
+import './globals.css';
+const url=process.env.NEXT_PUBLIC_SITE_URL;
+export const metadata:Metadata={...(url?{metadataBase:new URL(url)}:{}),title:{default:'Abasi Bikorimana — Engineering Portfolio',template:'%s | Abasi Bikorimana'},description:'Computer Science undergraduate at Texas Tech University exploring C++, real-time graphics, simulation, spacecraft systems, and robotics.',openGraph:{title:'Abasi Bikorimana — Engineering Portfolio',description:'Selected engineering work in graphics, simulation, spacecraft systems, and robotics.',type:'website',...(url?{images:[{url:'/social-card.png',width:1200,height:630}]}:{})},twitter:{card:'summary_large_image',title:'Abasi Bikorimana — Engineering Portfolio',...(url?{images:['/social-card.png']}:{})},robots:{index:true,follow:true},icons:{icon:'/icon.svg'}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" data-theme="dark" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{__html:`try{var t=localStorage.getItem('portfolio-theme');if(t==='light')document.documentElement.dataset.theme='light'}catch(e){}`}}/></head><body id="top"><a className="skip-link" href="#main">Skip to content</a><Navigation/><main id="main">{children}</main><Footer/></body></html>}

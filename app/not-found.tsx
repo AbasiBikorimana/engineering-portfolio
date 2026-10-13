@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function NotFound(){return <section className="not-found"><p className="eyebrow">404 / OUT OF BOUNDS</p><h1>This route doesn’t<br/>lead anywhere.</h1><p>The page may have moved, or the URL may be incorrect.</p><div className="hero-actions"><Link href="/" className="button primary">Back to home →</Link><Link href="/projects/" className="button">Explore projects</Link></div></section>}
