@@ -18,7 +18,8 @@ for(const file of files){const html=await readFile(file,'utf8');const rel=file.s
   if(tag==='a')links++;else assets++;
  }
 }
-const expected=['index.html','projects/index.html','experience/index.html','skills/index.html','about/index.html','contact/index.html','404.html','projects/lunar-rover/index.html','projects/bloxshade/index.html','projects/unity-compute/index.html','projects/unreal-cpp/index.html','projects/component-placement/index.html'];
+const expected=['index.html','projects/index.html','experience/index.html','skills/index.html','about/index.html','contact/index.html','404.html','projects/lunar-rover/index.html','projects/bloxshade/index.html','projects/unity-compute/index.html','projects/unreal-cpp/index.html'];
 for(const page of expected){try{await stat(join(root,page));}catch{errors.push(`Missing expected page ${page}`);}}
+try{await stat(join(root,'projects/component-placement/index.html'));errors.push('Removed component-placement route still exists in export');}catch(error){if(error.code!=='ENOENT')throw error;}
 const resume=await readFile(join(root,'Abasi-Bikorimana-Resume.pdf'));if(resume.subarray(0,5).toString()!=='%PDF-')errors.push('Resume is not a valid PDF header');
 if(errors.length){console.error(errors.join('\n'));process.exit(1);}console.log(`PASS: ${files.length} HTML files; ${links} internal links; ${assets} local asset references; titles, H1, IDs, skip navigation, case-study routes, and resume checked.`);
