@@ -1,3 +1,5 @@
+#Built with my good friend chatgpt
+
 # Abasi Bikorimana — Engineering Portfolio
 
 A complete responsive portfolio built with Next.js App Router, TypeScript, Tailwind CSS, Motion, and typed project content. Dark theme by default, with a persistent light-theme option. No backend, account, form service, or API key required.
